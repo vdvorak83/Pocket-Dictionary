@@ -11,7 +11,7 @@ public class MainPageController {
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index(Model model){
         model.addAttribute("appName","Pocket Dictionary Application");
-        return "views/main_page";
+        return "main_page";
     }
 
 }
