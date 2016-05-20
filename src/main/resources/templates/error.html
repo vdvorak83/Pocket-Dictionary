@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"/>
+<body>
+<div class="container">
+    <h1>Support Error Page</h1>
+
+    <!--  As we are using Thymeleaf, you might consider using
+          ${#httpServletRequest.requestURL}. But that returns the path
+          to this error page.  Hence we explicitly add the url to the
+          Model in some of the example code. -->
+    <p th:if="${url}">
+        <b>Page:</b> <span th:text="${url}">Page URL</span>
+    </p>
+
+    <p>Application has encountered an error. Please contact support on
+        ...</p>
+
+    <p>Support may ask you to right click to view page source.</p>
+
+    <div th:utext="'Failed URL: ' +  ${url}" th:remove="tag">${url}</div>
+    <div th:utext="'Exception: ' + ${message}" th:remove="tag">${exception.message}</div>
+    <ul th:remove="tag">
+        <li th:each="ste : ${stackTrace}" th:remove="tag"><span
+                th:utext="${ste}" th:remove="tag">${ste}</span></li>
+    </ul>
+
+</div>
+</body>
+</html>

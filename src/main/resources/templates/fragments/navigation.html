@@ -6,12 +6,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">Profile</a></li>
         <li><a href="#">Messages</a></li>
-        <li>
-            <a href="javascript: document.logoutForm.submit()"> Logout</a>
-            <form name="logoutForm" th:action="@{/logout}" method="post" th:hidden="true">
-                <input type="submit" value="Sign Out"/>
-            </form>
-        </li>
+        <li><a href="/logout">Logout</a></li>
     </ul>
 </div>
 </body>
