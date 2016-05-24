@@ -10,6 +10,7 @@ public class Word {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
+    private String text;
 
     public String getText() {
         return text;
@@ -26,6 +27,4 @@ public class Word {
     public void setId(long id) {
         this.id = id;
     }
-
-    private String text;
 }

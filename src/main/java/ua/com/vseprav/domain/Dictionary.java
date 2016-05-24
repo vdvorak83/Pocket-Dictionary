@@ -11,6 +11,7 @@ public class Dictionary {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String title;
+    private String description;
 
     public long getId() {
         return id;
@@ -35,6 +36,4 @@ public class Dictionary {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    private String description;
 }
