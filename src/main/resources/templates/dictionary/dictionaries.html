@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header"/>
+<body>
+<div class="container">
+    <div th:replace="fragments/navigation :: navigation"/>
+</div>
+<div class="container">
+    <h1>Dictionaries</h1>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="dictionary,iterationStatus  : ${dictionaries}">
+            <td th:text="${dictionary.title}"/>
+            <td th:text="${dictionary.description}"/>
+            <td><a th:href="${'/dictionaries/' + dictionary.id}">Show</a></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

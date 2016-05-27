@@ -3,10 +3,9 @@
 <body>
 <div th:fragment="navigation">
     <ul class="nav nav-pills">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Messages</a></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/dictionaries}">Dictionaries</a></li>
+        <li><a th:href="@{/logout}">Logout</a></li>
     </ul>
 </div>
 </body>

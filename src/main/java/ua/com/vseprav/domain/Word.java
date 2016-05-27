@@ -1,9 +1,6 @@
 package ua.com.vseprav.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Word {
@@ -11,6 +8,8 @@ public class Word {
     @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String text;
+    @ManyToOne
+    private Dictionary dictionary;
 
     public String getText() {
         return text;
